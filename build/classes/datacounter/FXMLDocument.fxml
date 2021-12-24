@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="307.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="datacounter.FXMLDocumentController">
+    <children>
+      <Separator layoutY="149.0" prefHeight="17.0" prefWidth="378.0" />
+      <Separator layoutX="369.0" orientation="VERTICAL" prefHeight="307.0" prefWidth="15.0" style="-fx-: black;" />
+      <Label fx:id="newLabel" layoutX="44.0" layoutY="17.0" text="New" />
+      <Label fx:id="updateLabel" layoutX="157.0" layoutY="17.0" text="Update" />
+      <Label fx:id="inactLabel" layoutX="283.0" layoutY="17.0" text="Inact" />
+      <Label fx:id="dayOfVerifLabel" layoutX="78.0" layoutY="175.0" text="Day Of Verified" />
+      <TextField fx:id="newTextBox" alignment="CENTER" focusTraversable="false" layoutX="25.0" layoutY="73.0" prefHeight="25.0" prefWidth="63.0" styleClass="clearBkgrndTextInput" stylesheets="@styles.css" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="newAddButton" layoutX="24.0" layoutY="43.0" mnemonicParsing="false" onAction="#handleIncreaseNewOnClick" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Button fx:id="newSubButton" layoutX="57.0" layoutY="43.0" mnemonicParsing="false" onAction="#handleDecreaseNewOnClick" prefWidth="32.0" text="-" />
+      <Button fx:id="updateSubButton" layoutX="177.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleDecreaseUpdateOnClick" prefWidth="32.0" text="-" />
+      <Button fx:id="updateAddButton" layoutX="144.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleIncreaseUpdateOnClick" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <TextField fx:id="updateTextBox" alignment="CENTER" focusTraversable="false" layoutX="145.0" layoutY="71.0" prefHeight="25.0" prefWidth="63.0" styleClass="clearBkgrndTextInput" stylesheets="@styles.css" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="inactSubButton" layoutX="297.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleDecreaseInactOnClick" prefWidth="32.0" text="-" />
+      <Button fx:id="inactAddButton" layoutX="264.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleIncreaseInactOnClick" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <TextField fx:id="inactTextBox" alignment="CENTER" focusTraversable="false" layoutX="265.0" layoutY="71.0" prefHeight="25.0" prefWidth="63.0" styleClass="clearBkgrndTextInput" stylesheets="@styles.css" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="dayOfVerifSubButton" layoutX="120.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleDecreaseDayOfVerifOnClick" prefWidth="32.0" text="-" />
+      <Button fx:id="dayOfVerifAddButton" layoutX="87.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleIncreaseDayOfVerifOnClick" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <TextField fx:id="dayOfVerifTextBox" alignment="CENTER" focusTraversable="false" layoutX="88.0" layoutY="231.0" prefHeight="25.0" prefWidth="63.0" styleClass="clearBkgrndTextInput" stylesheets="@styles.css" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="newResetButton" layoutX="26.0" layoutY="106.0" mnemonicParsing="false" onAction="#handleNewResetOnClick" prefHeight="25.0" prefWidth="63.0" styleClass="redBkgrndButton" stylesheets="@styles.css" text="Reset" />
+      <Button fx:id="updateResetButton" layoutX="145.0" layoutY="106.0" mnemonicParsing="false" onAction="#handleUpdateResetOnClick" prefHeight="25.0" prefWidth="63.0" styleClass="redBkgrndButton" stylesheets="@styles.css" text="Reset" />
+      <Button fx:id="inactResetButton" layoutX="264.0" layoutY="106.0" mnemonicParsing="false" onAction="#handleInactResetOnClick" prefHeight="25.0" prefWidth="63.0" styleClass="redBkgrndButton" stylesheets="@styles.css" text="Reset" />
+      <Button fx:id="dayOfVerifResetButton" layoutX="89.0" layoutY="266.0" mnemonicParsing="false" onAction="#handleVerifResetOnClick" prefHeight="25.0" prefWidth="63.0" styleClass="redBkgrndButton" stylesheets="@styles.css" text="Reset" />
+      <Label fx:id="cellActivationsLabel" alignment="CENTER" layoutX="399.0" layoutY="152.0" prefHeight="40.0" prefWidth="92.0" text="Cell Activations &amp; Deactivations" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="cellActivationsSubButton" layoutX="445.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleDecreaseCellActivationsOnClick" prefWidth="32.0" text="-" />
+      <Button fx:id="cellActivationsAddButton" layoutX="412.0" layoutY="199.0" mnemonicParsing="false" onAction="#handleIncreaseCellActivationsOnClick" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <TextField fx:id="cellActivationsTextBox" alignment="CENTER" focusTraversable="false" layoutX="413.0" layoutY="229.0" prefHeight="25.0" prefWidth="63.0" styleClass="clearBkgrndTextInput" stylesheets="@styles.css" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="cellActivationsResetButton" layoutX="414.0" layoutY="264.0" mnemonicParsing="false" onAction="#handleCellActivationsResetOnClick" prefHeight="25.0" prefWidth="63.0" styleClass="redBkgrndButton" stylesheets="@styles.css" text="Reset" />
+      <Button fx:id="certsCreatedResetButton" layoutX="415.0" layoutY="106.0" mnemonicParsing="false" onAction="#handleCertsCreatedResetOnClick" prefHeight="25.0" prefWidth="63.0" styleClass="redBkgrndButton" stylesheets="@styles.css" text="Reset" />
+      <TextField fx:id="certsCreatedTextBox" alignment="CENTER" focusTraversable="false" layoutX="414.0" layoutY="71.0" prefHeight="25.0" prefWidth="63.0" styleClass="clearBkgrndTextInput" stylesheets="@styles.css" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="certsCreatedAddButton" layoutX="413.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleIncreaseCertsCreatedOnClick" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <Button fx:id="certsCreatedSubButton" layoutX="446.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleDecreaseCertsCreatedOnClick" prefWidth="32.0" text="-" />
+      <Label fx:id="certsCreatedLabel" layoutX="393.0" layoutY="17.0" prefHeight="0.0" prefWidth="104.0" text="Certificates Created" />
+      <Label fx:id="prevDayVerifLabel" alignment="CENTER" layoutX="194.0" layoutY="175.0" prefHeight="11.0" prefWidth="92.0" text="Prev Day Verified" />
+      <Button fx:id="prevDayVerifSubButton" layoutX="238.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleDecreasePrevDayVerifOnClick" prefWidth="32.0" text="-" />
+      <Button fx:id="prevDayVerifAddButton" layoutX="205.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleIncreasePrevDayVerifOnClick" prefHeight="25.0" prefWidth="32.0" text="+" />
+      <TextField fx:id="prevDayVerifTextBox" alignment="CENTER" focusTraversable="false" layoutX="206.0" layoutY="231.0" prefHeight="25.0" prefWidth="63.0" styleClass="clearBkgrndTextInput" stylesheets="@styles.css" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="prevDayVerifResetButton" layoutX="207.0" layoutY="266.0" mnemonicParsing="false" onAction="#handlePrevDayVerifResetOnClick" prefHeight="25.0" prefWidth="63.0" styleClass="redBkgrndButton" stylesheets="@styles.css" text="Reset" />
+    </children>
+</AnchorPane>
